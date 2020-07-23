@@ -2,8 +2,8 @@
 - name: This sets up an httpd webserver
   hosts: all
   tasks:
-  - name: Install apache packages 
-    yum:
+  - name: Install apache packages
+    apt:
       name: httpd
       state: present
   - name: ensure httpd is running
@@ -11,11 +11,11 @@
       name: httpd
       state: started
   - name: Open port 80 for http access
-    firewalld:
+    ufw:
       service: http
       permanent: true
       state: enabled
   - name: Restart the firewalld service to load in the firewall changes
     service:
-      name: firewalld
-      state: restarted
+      name: ufw
+      state: ufw
