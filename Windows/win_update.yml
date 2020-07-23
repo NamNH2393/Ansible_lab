@@ -2,8 +2,8 @@
 - hosts: all
   tasks:
     - name: Update Windows
-      win_updates:
-       category_names:
+    win_updates:
+      category_names:
         - SecurityUpdates
         - CriticalUpdates
         - UpdateRollups
