@@ -1,0 +1,7 @@
+- name: Install  notepad++ from chocolatey
+  hosts: all
+  tasks:
+    - name: Install Notepad++
+      win_chocolatey:
+        name: notepadplusplus
+        state: latest
