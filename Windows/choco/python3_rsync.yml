@@ -1,0 +1,12 @@
+- name: Install python, rsync from chocolatey
+  hosts: all
+  tasks:
+    - name: Install Python3
+      win_chocolatey:
+        name: python3
+        state: latest
+
+    - name: Install Rsync
+      win_chocolatey:
+        name: rsync
+        state: latest
