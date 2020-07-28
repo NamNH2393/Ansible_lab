@@ -1,0 +1,10 @@
+- name: Create user test on windows hosts
+  hosts: all
+  tasks:
+    - name: Create test account
+      win_user:
+        name: test
+        password: Password123
+        state: present
+        groups:
+          - Administrators
