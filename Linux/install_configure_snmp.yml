@@ -12,10 +12,10 @@
       enabled: yes
   - name: Insert New line
     blockinfile:
-    path: /etc/snmp/snmpd.conf
+     path: /etc/snmp/snmpd.conf
     insertafter: "rocommunity"
     content: public
   - name: Restart SNMP Service
     service:
-      name: snmpd
+     name: snmpd
       state: restarted
