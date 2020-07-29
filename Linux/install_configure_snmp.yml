@@ -13,8 +13,9 @@
   - name: Insert New line
     blockinfile:
      path: /etc/snmp/snmpd.conf
-    insertafter: "rocommunity"
-    content: public
+     insertafter: "rocommunity"
+     content: |
+      rocommunity public 192.168.100.100
   - name: Restart SNMP Service
     service:
      name: snmpd
