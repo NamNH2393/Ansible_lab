@@ -8,8 +8,8 @@
       state: latest
   - name: Enable snmp service
     service:
-      name: snmpd
-      enabled: yes
+     name: snmpd
+     enabled: yes
   - name: Insert New line
     blockinfile:
      path: /etc/snmp/snmpd.conf
